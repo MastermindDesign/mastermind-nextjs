@@ -1,0 +1,53 @@
+.profile {
+    width: 240px;
+    right: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    .profile-image {
+        svg {
+            margin-bottom: 10px;
+        }
+    }
+    .username {
+        text-align: center;
+        .lead {
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(56, 56, 56);
+        }
+    }
+    .about {
+        .socials {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 18px;
+            span {
+                display: inline;
+                padding-right: 18px;
+                a {
+                    color: #fff;
+                    text-decoration-line: none;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1020px) {
+        position: static;
+        top: 10px;
+        width: auto;
+        margin: 40px 24px 16px;
+        padding-bottom: 16px;
+        .profile-image {
+            svg {
+                top: -33px;
+            }
+        }
+    }
+}

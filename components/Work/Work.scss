@@ -1,0 +1,44 @@
+.work {
+    //max-height: 100vh;
+    position: absolute;
+    left: 40%;
+    width: 50%;
+    .projects {
+        a {
+            color: #fff;
+            &:hover {
+                text-decoration-line: none;
+            }
+        }
+        .card {
+            height: 95px;
+            background-color: rgb(20, 20, 20);
+            margin: 5px;
+            &:hover {
+                border: 0.5px solid #fff;
+            }
+            &.card-small {
+                height: 75px;
+                //margin-bottom: 35px;
+            }
+            .card-text {
+                span {
+                    position: absolute;
+                    bottom: 5px;
+                    font-size: 12px;
+                    float: right;
+                    i {
+                        padding-right: 7px;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1020px) {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        margin-left: 0;
+        width: auto;
+    }
+}
