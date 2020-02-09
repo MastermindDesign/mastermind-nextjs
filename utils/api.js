@@ -1,4 +1,4 @@
-export const API_IP = "142.93.13.189";
+export const API_URL = "https://api.masterminddesign.io";
 export const DEFAULT_DATA = [
     {
         _id: "5e2e126ce7179a2f0113a0d1",
