@@ -25,7 +25,7 @@ class Work extends Component {
     componentDidMount() {
         this.interval = setInterval(() => this.tick(), 100);
         setTimeout(() => {
-            fetch(`${API_URI}/api/projects`)
+            fetch(`${API_URL}/api/projects`)
                 .then(response => {
                     return response.json();
                 })
