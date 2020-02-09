@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import Loading from "../Loading/Loading";
-import { API_IP, DEFAULT_DATA } from "../../utils/api";
+import { API_URL, DEFAULT_DATA } from "../../utils/api";
 
 import "./Work.scss";
 
@@ -25,7 +25,7 @@ class Work extends Component {
     componentDidMount() {
         this.interval = setInterval(() => this.tick(), 100);
         setTimeout(() => {
-            fetch(`http://${API_IP}/api/projects`)
+            fetch(`${API_URI}/api/projects`)
                 .then(response => {
                     return response.json();
                 })
@@ -62,7 +62,10 @@ class Work extends Component {
                             return (
                                 <div className="row" key={project._id}>
                                     <div className="col-md-12">
-                                        <Link href={project.link}>
+                                        <Link
+                                            href={project.link}
+                                            prefetch={false}
+                                        >
                                             <a
                                                 href={project.link}
                                                 target={
